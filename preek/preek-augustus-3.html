@@ -50,15 +50,15 @@
   top: -1.2rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #F9F6F1;      /* achtergrondkleur */
-  color: #7C1C1C;                 /* tekstkleur */
+  background-color: #F9F6F1;
+  color: #7C1C1C;
   font-family: "Garamond", serif;
   font-size: 1rem;
-  padding: 0.3rem 0.8rem;          /* binnenruimte voor vakje */
-  border-radius: 12px;             /* afgeronde hoeken */
-  border: 1px solid #C6A664;      /* subtiele rand, past bij je huisstijl */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* lichte schaduw voor diepte */
-  white-space: nowrap;             /* tekst niet breken */
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  border: 1px solid #C6A664;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  white-space: nowrap;
 }
 
 
@@ -136,16 +136,6 @@ h1 {
   position: relative;
 }
 
-h1::before {
-  content: "✝";
-  display: block;
-  color: #7C1C1C;
-  font-size: 1.2rem;
-  margin-bottom: 0.6rem;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
 
 /* Subtitelstijl */
 h2 {
@@ -156,6 +146,12 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+    .armenian-cross {
+      display: block;
+      margin: 0 auto 0.6rem auto;
+      width: 3.5rem;
+      height: auto;
+    }
 /* ============================================= Mobile verie ============================================= */
 /* ===== NAVBAR ===== */
 @media (max-width: 600px) {
@@ -192,7 +188,10 @@ h2 {
   </ul>
 </nav>
 
-  <h1>Preek van 3 Augustus 2025</h1>
+  <h1>
+    <img src="../photos/armenian-cross.png" alt="Armenian Cross" class="armenian-cross">
+    Preek van 3 Augustus 2025
+  </h1>
 
     <div class="audio-top">
     <audio controls>
