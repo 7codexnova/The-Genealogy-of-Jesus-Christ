@@ -57,15 +57,12 @@
   padding: 0 0.6rem;
 }
 
-/* Stijl de audiocontroller zelf */
 audio {
   width: 100%;
   filter: sepia(20%) saturate(120%) contrast(95%);
   border-radius: 8px;
 }
 
-
-  /* ===== NAVIGATIEBALK ===== */
   .navbar {
     width: 100%;
     background: linear-gradient(120deg, #7C1C1C, #3B2D57);
@@ -124,7 +121,7 @@ h1, h2 {
 }
 
 h1 {
-  color: #3B2D57; /* dieppaarsblauw: spirituele toon */
+  color: #3B2D57;
   font-size: 2.3rem;
   font-weight: 600;
   margin-top: 7rem;
@@ -154,8 +151,29 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+/* ============================================= Mobile verie ============================================= */
+/* ===== NAVBAR ===== */
+@media (max-width: 600px) {
+  .navbar ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start; 
+    padding-left: 0;             
+    margin: 0;                   
+  }
 
+  .navbar li {
+    flex: 0 0 auto;             
+  }
 
+  .navbar li a {
+    padding: 0.75rem 1rem;      
+    font-size: 1rem;            
+    border-right: 1px solid rgba(255,255,255,0.1); 
+  }
+}
 </style>
 
 </head>
