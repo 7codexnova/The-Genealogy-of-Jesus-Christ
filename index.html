@@ -175,17 +175,25 @@
 /* ===== RESPONSIEVE NAVBAR ===== */
 @media (max-width: 600px) {
   .navbar ul {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;           /* Items niet laten afbreken */
+    overflow-x: auto;            /* Horizontaal scrollen mogelijk */
+    -webkit-overflow-scrolling: touch; /* soepele scroll op iOS */
+    justify-content: flex-start; /* Zet menu links uitgelijnd */
+    padding-left: 0;             /* Verwijder extra padding */
+    margin: 0;                   /* Verwijder marge */
+  }
+
+  .navbar li {
+    flex: 0 0 auto;              /* Elk item behoudt zijn eigen breedte */
   }
 
   .navbar li a {
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border-right: none;
+    padding: 0.75rem 1rem;       /* Iets kleinere padding voor mobiel */
+    font-size: 1rem;             /* Kleinere tekst zodat er meer past */
+    border-right: 1px solid rgba(255,255,255,0.1); /* blijft netjes scheiden */
   }
 }
-
 
 
   </style>
