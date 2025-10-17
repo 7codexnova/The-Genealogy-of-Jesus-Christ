@@ -44,18 +44,23 @@
   top: 2rem;
 }
 
-.audio-top::before {
-  content: "🎵 Luister de preek";
+.audio-top::before { 
+  content: "🎵 Luister hier";
   position: absolute;
   top: -1.2rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #F9F6F1;
-  color: #7C1C1C;
+  background-color: #F9F6F1;      /* achtergrondkleur */
+  color: #7C1C1C;                 /* tekstkleur */
   font-family: "Garamond", serif;
   font-size: 1rem;
-  padding: 0 0.6rem;
+  padding: 0.3rem 0.8rem;          /* binnenruimte voor vakje */
+  border-radius: 12px;             /* afgeronde hoeken */
+  border: 1px solid #C6A664;      /* subtiele rand, past bij je huisstijl */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* lichte schaduw voor diepte */
+  white-space: nowrap;             /* tekst niet breken */
 }
+
 
 audio {
   width: 100%;
