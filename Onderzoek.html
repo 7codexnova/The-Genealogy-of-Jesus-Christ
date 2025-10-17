@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -233,3 +234,169 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bijbelstudie & Onderzoek 2025</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Georgia, serif;
+      line-height: 1.6;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #fdfdfd;
+      color: #333;
+      padding: 5rem;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #ffc8f2;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar li a:hover {
+      background-color: #edbbf5;
+      color: #2c3e50;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+    }
+
+    .onderzoek-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.2rem;
+      text-align: center;
+    }
+
+    .onderzoek-item {
+      background-color: #fdeefe;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .onderzoek-item:hover {
+      background-color: #edbbf5;
+      transform: translateY(-3px);
+    }
+
+    .onderzoek-item h3 {
+      margin: 0.5rem 0;
+      color: #2c3e50;
+    }
+
+    .onderzoek-item p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    
+    .onderzoek-item.disabled {
+     background-color: #e0e0e0;
+     color: #999;
+    border: 1px solid #ccc;
+     cursor: not-allowed;
+    pointer-events: none;
+    transform: none;
+    }
+
+    .onderzoek-item.disabled:hover {
+    background-color: #e0e0e0;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="main.html">Bijbel</a></li>
+      <li><a href="preek.html">Preek</a></li>
+      <li><a href="Onderzoek.html" class="active">Studie/Onderzoek</a></li>
+      <li><a href="#">PDF/Bron</a></li>
+    </ul>
+  </nav>
+
+  <h1>Bijbelstudie & Onderzoek – 2025</h1>
+  <p style="text-align:center; margin-bottom:2rem;">
+    Elke week een diepgaande analyse van een bijbelvers, door <strong>Elana</strong> en <strong>Emily</strong>.
+    Klik op een week om het verslag te lezen.
+  </p>
+
+  <div class="onderzoek-grid">
+    <!-- WEEK 1 -->
+    <div class="onderzoek-item disabled">
+      <h3>Week 1</h3>
+      <p>Emily – Analyse van .</p>
+    </div>
+
+    <a href="onderzoek/onderzoek-week1-lana.html" class="onderzoek-item">
+      <h3>Week 1</h3>
+      <p>Elana – Song Of Solomon 3:5</p>
+    </a>
+
+
+    <!-- WEEK 2 -->
+    <div class="onderzoek-item disabled">
+      <h3>Week 2</h3>
+      <p>Emily – Analyse van .</p>
+    </div>
+
+    <a href="onderzoek/onderzoek-week2-lana.html" class="onderzoek-item">
+      <h3>Week 2</h3>
+      <p>Elana – Psalms 46:10</p>
+    </a>
+
+    <!-- WEEK 3 -->
+    <div class="onderzoek-item disabled">
+      <h3>Week 3</h3>
+      <p>Emily – Analyse van .</p>
+    </div>
+
+    <a href="onderzoek/onderzoek-week3-lana.html" class="onderzoek-item">
+      <h3>Week 3</h3>
+      <p>Elana – James 1:4</p>
+    </a>
+
+
+  </div>
+
+</body>
+</html>
+>>>>>>> c5947af428de9b443051288c408dbc25d2d9cf8e
