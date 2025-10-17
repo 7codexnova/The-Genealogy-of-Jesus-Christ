@@ -11,7 +11,7 @@ Het doel van de site is een archief dat inzicht over gelovige thema’s zoals li
 ## 🌐 Live website
 De website is te bekijken via GitHub Pages:
 
-👉 [**Bekijk de website**](https://<jouw-github-gebruikersnaam>.github.io/7codexnova/)
+👉 [**Bekijk de website**](https://7codexnova.github.io/The-Genealogy-of-Jesus-Christ/)
 
 ---
 
