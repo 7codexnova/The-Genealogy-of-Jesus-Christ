@@ -4,132 +4,192 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Matthew 1 & 2 - The Birth and Early Life of Jesus</title>
-  <style>
+ <style>
+    /* ===== BODY ===== */
     body {
-      font-family: Georgia, serif;
-      line-height: 1.6;
-      /* padding-top to account for the fixed navbar */
-      padding-top: 5rem;
-      padding-left: 5rem;
-      padding-right: 5rem;
+      font-family: "Georgia", "Garamond", serif;
+      background-color: #F9F6F1;
+      color: #2c2c2c;
+      margin: 0;
+      padding: 5rem 2rem;
+      line-height: 1.8;
       max-width: 1000px;
-      margin: auto;
-      background-color: #fdfdfd;
-      color: #333;
+      margin-inline: auto;
+      align-items: center;
+      background-image: radial-gradient(
+        circle at top left,
+        rgba(198,166,100,0.08),
+        transparent 60%
+      );
     }
 
-    /* Styling for the navigation bar */
+    /* ===== NAVIGATIEBALK ===== */
     .navbar {
-      background-color: #ffc8f2;
-      overflow: hidden;
+      width: 100%;
+      background: linear-gradient(120deg, #7C1C1C, #3B2D57);
       position: fixed;
       top: 0;
-      width: 100%;
       left: 0;
       z-index: 1000;
-      display: flex;
-      justify-content: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+      border-bottom: 2px solid #C6A664;
     }
 
-    .navbar a {
-      color: #fdfdfd;
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar li a {
+      display: block;
+      color: #F9F6F1;
       text-align: center;
       padding: 1rem 2rem;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      letter-spacing: 0.5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-right: 1px solid rgba(255,255,255,0.1);
     }
 
-    .navbar a:hover {
-      background-color: #edbbf5;
-      color: #2c3e50;
+    .navbar li:last-child a {
+      border-right: none;
     }
-    
-    .container { 
+
+    .navbar li a:hover {
+      background-color: #C6A664;
+      color: #3B2D57;
+    }
+
+    /* ===== TITELS ===== */
+    h1, h2 {
+      text-align: center;
+      font-family: "Garamond", "Georgia", serif;
+      letter-spacing: 0.4px;
+    }
+
+    h1 {
+      color: #3B2D57;
+      font-size: 2.3rem;
+      font-weight: 600;
+      margin-top: 7rem;
+      text-align: center;
+      display: block;
+      width: 100%;
+      position: relative;
+      border-bottom: 2px solid #C6A664;
+      padding-bottom: 0.5rem;
+    }
+
+    h2 {
+      color: #7C1C1C;
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .armenian-cross {
+      display: block;
+      margin: 0 auto 0.6rem auto;
+      width: 3.5rem;
+      height: auto;
+    }
+
+    /* ===== CONTENT LAYOUT ===== */
+    .container {
       display: flex;
-      height:auto;
-    }
-    .side{
-      flex: 1;
-      background-color:#fdfdfd ;
       gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .side {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      gap: 1rem;
     }
-    .side img{
+
+    .side img {
       max-width: 100%;
       height: auto;
+      border-radius: 8px;
     }
+
     .center {
       flex: 2;
-      background-color: #fdfdfd;
-      padding: 20px;
+      background-color: #f8f5f0;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       text-align: left;
     }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    h1 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
-    }
+
+    /* ===== VERSES ===== */
     .verses {
       cursor: pointer;
-      border-bottom: #edbbf5;
+      border-bottom: #F9F6F1;
       padding-bottom: 4px;
-      color: #333;
+      color: #2c2c2c;
+      display: block;
+      margin: 0.5rem 0;
     }
+
     .verses:hover {
       text-decoration: none;
-      border-bottom: 3px dotted #f475e9;
+      border-bottom: 3px dotted #7C1C1C;
     }
-    .section-title {
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-top: 2rem;
-    }
+
     .comment-box {
       display: none;
-      margin: 0.5rem 0 1rem 1rem;
-      padding: 0.5rem;
-      background-color: #fdeefe;
-      border: 1px solid #ddd;
-      border-radius: 4px;
+      margin: 0.5rem 0 1rem 0;
+      padding: 0.75rem 1rem;
+      background-color: #F9F6F1;
+      border: 1px solid #C6A664;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
+
     .comment-label {
       font-weight: bold;
       margin-bottom: 0.25rem;
+      color: #7C1C1C;
     }
-    textarea {
-      width: 100%;
-      height: 60px;
-      padding: 0.5rem;
-      font-family: inherit;
+
+    /* ===== SECTION TITLES ===== */
+    .section-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      color: #3B2D57;
     }
   </style>
 </head>
 <body>
 
-  <div class="navbar">
-    <a href="#">Bijbel</a>
-    <a href="preek.html">Preek</a>
-    <a href="#">Studie/Onderzoek</a>
-    <a href="#">PDF/Bron</a>
-  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Bijbel</a></li>
+      <li><a href="preek.html">Preek</a></li>
+      <li><a href="Onderzoek.html">Studie/Onderzoek</a></li>
+      <li><a href="#">PDF/Bron</a></li>
+    </ul>
+  </nav>
+  <h1>
+    <img src="photos/armenian-cross.png" alt="Armenian Cross" class="armenian-cross">
+    Matthew 1
+  </h1>
 
   <div class="container">
-    <div class="side">
-      <img src="photos/3.jpg" alt="Foto links">
-      <img src="photos/1.jpeg" alt="Foto links">
-      <img src="photos/4.jpg" alt="Foto links">
-    </div>
 
     <div class="center">
-      <h1>Matthew 1</h1>
       <div class="section-title">The Genealogy of Jesus Christ</div>
 
       <span class="verses" onclick="toggleComment('c1')">
@@ -258,9 +318,6 @@
         entire Church throughout history is that Mary remained a virgin for life. Firstborn: See note on Lk 2:7.</p>
       </div>
     </div>
-    <div class="side">
-      <img src="photos/2.jpeg" alt="Foto rechts">
-    </div>
   </div>
 
   <script>
@@ -269,10 +326,5 @@
       el.style.display = el.style.display === "none" || el.style.display === "" ? "block" : "none";
     }
   </script>
-
-  <audio controls>
-  <source src="audio/preek-4.8.mp4" type="audio/mpeg">
-</audio>
-
 </body>
 </html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bijbelstudie & Onderzoek 2025</title>
+  <style>
+    body {
+      font-family: "Georgia", "Garamond", serif;
+      background-color: #F9F6F1;
+      color: #2c2c2c;
+      margin: 0;
+      padding: 5rem 2rem;
+      line-height: 1.8;
+      max-width: 1000px;
+      margin-inline: auto;
+      background-image: radial-gradient(
+        circle at top left,
+        rgba(198,166,100,0.08),
+        transparent 60%
+      );
+    }
+
+    /* ===== NAVIGATIEBALK ===== */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(120deg, #7C1C1C, #3B2D57);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+      border-bottom: 2px solid #C6A664;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar li a {
+      display: block;
+      color: #F9F6F1;
+      text-align: center;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .navbar li:last-child a {
+      border-right: none;
+    }
+
+    .navbar li a:hover {
+      background-color: #C6A664;
+      color: #3B2D57;
+    }
+
+    /* ===== TITELS ===== */
+    h1, h2 {
+      text-align: center;
+      font-family: "Garamond", "Georgia", serif;
+      letter-spacing: 0.4px;
+    }
+
+    h1 {
+      color: #3B2D57;
+      font-size: 2.3rem;
+      font-weight: 600;
+      margin-top: 7rem;
+      display: block;
+      width: 100%;
+      position: relative;
+    }
+
+    .armenian-cross {
+      display: block;
+      margin: 0 auto 0.6rem auto;
+      width: 3.5rem;
+      height: auto;
+    }
+
+    h2 {
+      color: #7C1C1C;
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ===== ONDERZOEK GRID ===== */
+    .onderzoek-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.2rem;
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    .onderzoek-item {
+      background-color: #f8f5f0;
+      border: 1px solid #d8cdb9;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: #2c2c2c;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .onderzoek-item:hover {
+      background-color: #C6A664;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    .onderzoek-item h3 {
+      margin: 0.5rem 0;
+      color: #7C1C1C;
+      font-weight: bold;
+    }
+
+    .onderzoek-item p {
+      font-size: 0.9rem;
+      color: #3B2D57;
+      margin: 0.4rem 0 0;
+    }
+
+    .onderzoek-item.disabled {
+      background-color: #e1dfdb;
+      color: #9a9a9a;
+      pointer-events: none;
+      cursor: not-allowed;
+      border: 1px solid #c2c2c2;
+      box-shadow: none;
+    }
+
+    .onderzoek-item.disabled:hover {
+      background-color: #e1dfdb;
+    }
+
+    /* ===== SUBTIELE DECORATIE ELEMENTEN ===== */
+    hr.decor {
+      border: none;
+      border-top: 2px solid #C6A664;
+      width: 60%;
+      margin: 2rem auto;
+      opacity: 0.7;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #3B2D57;
+      margin-top: 3rem;
+      padding: 1.5rem;
+      border-top: 1px solid #C6A664;
+    }
+
+    footer span {
+      color: #7C1C1C;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Bijbel</a></li>
+      <li><a href="preek.html">Preek</a></li>
+      <li><a href="Onderzoek.html" class="active">Studie/Onderzoek</a></li>
+      <li><a href="#">PDF/Bron</a></li>
+    </ul>
+  </nav>
+
+    <h1>
+    <img src="photos/armenian-cross.png" alt="Armenian Cross" class="armenian-cross">
+    Bijbelstudie & Onderzoek – 2025
+  </h1>
+
+  <p style="text-align:center; margin-bottom:2rem;">
+    Elke week een diepgaande analyse van een bijbelvers, door <strong>Emily</strong> en <strong>Elana</strong>.
+    Klik op een week om het verslag te lezen.
+  </p>
+
+  <div class="onderzoek-grid">
+    <!-- WEEK 1 -->
+    <div class="onderzoek-item disabled">
+      <h3>Week 1</h3>
+      <p>Emily – Analyse van .</p>
+    </div>
+
+    <div class="onderzoek-item disabled">
+      <h3>Week 1</h3>
+      <p>Elana – Song Of Solomon 3:5</p>
+    </div>
+
+    <!-- WEEK 2 -->
+    <div class="onderzoek-item disabled">
+      <h3>Week 2</h3>
+      <p>Emily – Analyse van .</p>
+    </div>
+
+    <div class="onderzoek-item disabled">
+      <h3>Week 2</h3>
+      <p>Elana – Psalms 46:10</p>
+    </div>
+
+    <!-- WEEK 3 -->
+    <div class="onderzoek-item disabled">
+      <h3>Week 3</h3>
+      <p>Emily – Analyse van .</p>
+    </div>
+
+    <a href="onderzoek/onderzoek-week3-lana.html" class="onderzoek-item">
+      <h3>Week 3</h3>
+      <p>Elana – James 1:4</p>
+    </a>
+
+  </div>
+
+</body>
+</html>
