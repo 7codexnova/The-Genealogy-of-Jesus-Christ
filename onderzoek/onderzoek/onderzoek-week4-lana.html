@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onderzoek Week 4 – Elana</title>
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      background-color: #F9F6F1;
+      color: #2c2c2c;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    /* ===== NAVIGATIEBALK ===== */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(120deg, #7C1C1C, #3B2D57);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+      border-bottom: 2px solid #C6A664;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar li a {
+      display: block;
+      color: #F9F6F1;
+      text-align: center;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .navbar li:last-child a {
+      border-right: none;
+    }
+
+    .navbar li a:hover {
+      background-color: #C6A664;
+      color: #3B2D57;
+    }
+
+    header {
+      background: linear-gradient(120deg, #6B1E1E, #3D2C54);
+      color: #F9F6F1;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #E8DCC0;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2.5rem auto;
+      background-color: #fff;
+      padding: 3rem 3.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      border-top: 6px solid #C6A664;
+    }
+
+    h2 {
+      color: #6B1E1E;
+      border-bottom: 2px solid #C6A664;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #3D2C54;
+      margin-top: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    blockquote {
+      background-color: #f3eee7;
+      border-left: 5px solid #C6A664;
+      margin: 1.5rem 0;
+      padding: 1rem 1.4rem;
+      font-style: italic;
+      color: #3D2C54;
+    }
+
+    .bron {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 0.6rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #6B1E1E;
+      padding: 1.5rem;
+      border-top: 1px solid #C6A664;
+      background-color: #f5f3ed;
+    }
+
+    .card {
+      background-color: #f8f7f4;
+      border: 1px solid #e5e0d8;
+      border-radius: 10px;
+      padding: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .bron-titel {
+      font-weight: bold;
+      color: #6B1E1E;
+    }
+
+    .disabled {
+      background-color: #e0dfdb;
+      color: #999;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+
+  .bron-titel a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .bron-titel a:hover {
+    text-decoration: underline;
+  }
+
+  /* ============================================= Mobile verie ============================================= */
+/* ===== NAVBAR ===== */
+@media (max-width: 600px) {
+  .navbar ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start; 
+    padding-left: 0;             
+    margin: 0;                   
+  }
+
+  .navbar li {
+    flex: 0 0 auto;             
+  }
+
+  .navbar li a {
+    padding: 0.75rem 1rem;      
+    font-size: 1rem;            
+    border-right: 1px solid rgba(255,255,255,0.1); 
+  }
+}
+</style>
+  </style>
+</head>
+
+<body>
+    <nav class="navbar">
+    <ul>
+      <li><a href="../index.html">Bijbel</a></li>
+      <li><a href="../preek.html">Preek</a></li>
+      <li><a href="../Onderzoek.html" class="active">Studie/Onderzoek</a></li>
+      <li><a href="#">PDF/Bron</a></li>
+    </ul>
+  </nav>
+  <header>
+    <br>
+    <h1>Onderzoek Week 4 – Analyse van Psalm 51:1–2</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Inleiding</h2>
+      <p>
+        In dit onderzoek kijken we naar Psalm 51:1–2, een tekst dat gaat over spijt en vergeven. De psalm is één van de bekendste gebeden van David, geschreven na 
+        zijn fout met Bathseba. Het gaat om eerlijk schuld op te biechten en om om Gods vergivvenis te vragen. Vanuit de Armeens Apostolische kant maar ook volgens St. 
+        Grigor van Narek, gaat deze psalm niet alleen over spijt, maar over een proces van innerlijke zuivering. Net als bij James 1:4 laat het zien dat God in moeilijke 
+        momenten juist aan het werk is om de mens te vormen.
+      </p>
+    </section>
+
+    <section>
+      <h2>Analyse van Psalm 51:1–2</h2>
+      <blockquote>
+        “Have mercy upon me, O God, according to Your great mercy,and according to the multitude of Your compassions blot out my transgressions. Wash me thoroughly from 
+        my iniquity, and cleanse me from my sin.” — Psalm 51:1–2
+      </blockquote>
+    <p>
+      David schreef deze psalm nadat hij door de profeet Nathan werd geconfronteerd met zijn zonde. 
+      In plaats van zich te verdedigen, stort hij zijn hart uit bij God. Psalm 51 behoort tot de boetepsalmen – gebeden waarin mensen hun fouten erkennen en om vergeving vragen.
+      In de Armeens-Apostolische liturgie wordt deze psalm vaak gebruikt tijdens vasten of persoonlijke bekering. 
+      Het is een intens persoonlijk gesprek met God, geen afstandelijke tekst.
+    </p>
+     <p>
+      De herhalingen “Have mercy” en “according to Your great mercy” benadrukken dat David volledig op Gods genade vertrouwt, 
+      niet op zichzelf. De woorden “blot out”, “wash” en “cleanse” laten zien dat vergeving bij God zowel juridisch als innerlijk helend is. 
+      In de Armeens-Apostolische traditie herstelt Gods vergeving de harmonie van de ziel. Berouw is geen gevoel van schuld alleen, 
+      maar een hart dat zich omkeert naar God.
+    </p>
+        <p>
+      In de oosterse orthodoxie is barmhartigheid het hart van Gods karakter. Vergeving komt niet door verplichting, maar uit Gods liefde. 
+      De mens kan zichzelf niet zuiveren; dat doet God, als de mens zich opent in nederigheid. Psalm 51 laat zien dat echte vergeving 
+      begint met een eerlijk hart en dat God de innerlijke genezing brengt.
+    </p>
+    </section>
+
+    <section>
+      <h2>St. Grigor van Narek</h2>
+    <p>
+      Voor <strong>St. Grigor van Narek</strong> is Psalm 51 de basis van zijn hele werk. In <em>The Prayer Book of St. Gregory of Narek</em> 
+      herhaalt hij steeds opnieuw: “Wees mij genadig, Heer.” Zijn gebed draait om de kracht van tranen en berouw: 
+    </p>
+    <blockquote>
+      “You alone can wash away my guilt with the tears of repentance.”
+    </blockquote>
+    <p>
+      Net als in Psalm 51 vraagt hij niet alleen om vergeving, maar om innerlijke vernieuwing. Zijn lijden en pijn vormen een weg 
+      naar zuiverheid en een diepere relatie met God. Dit sluit direct aan bij de Armeens-Apostolische nadruk op genezing van de ziel.
+    </p>
+    <blockquote>
+      “Although I am surrounded by the multitude of my sins, I am not without hope, for You are the source of mercy.” - prayer 51    
+    </blockquote>
+    <p>
+      Hier benadrukt hij hoe de overvloed aan zonden niet de toegang tot Gods barmhartigheid belemmert. Dit idee komt ook terug in Psalm 
+      51:1–2, waar David zijn zonden erkent en om vergeving vraagt.
+    </p> 
+    <blockquote>
+      “You desire truth in the inward parts; cleanse me with hyssop, and I shall be clean.” - prayer 56    
+    </blockquote>
+    <p>
+      Dit verwijst naar Psalm 51:6, waar David vraagt om innerlijke zuivering. St. Grigor benadrukt dat ware zuivering van binnenuit 
+      komt, niet alleen van uiterlijke handelingen.
+    </p>  
+    <blockquote>
+      “Create in me a clean heart, O God, and renew a right spirit within me.” - prayer 93    
+    </blockquote>
+    <p>
+      Dit is een directe verwijzing naar Psalm 51:10. St. Grigor vraagt om een vernieuwd hart en geest, wat de kern is van zijn 
+      spirituele zoektocht.
+    </p> 
+    <blockquote>
+      “Remove the sinful stains upon my soul.” - prayer 75   
+    </blockquote>
+    <p>
+      Dit sluit aan bij Psalm 51:9, waar David vraagt om zijn zonden uit te wissen. St. Grigor ziet dit als een noodzakelijke stap 
+      naar verzoening met God.
+    </p>   
+    <blockquote>
+      “Let the fragrance of this book of confessions be doubled and influence many.” - prayer 33    </blockquote>
+    <p>
+      Dit geeft aan hoe hij Psalm 51:1–2 gebruikt als model voor oprechte berouw en het zoeken naar vergeving.
+    </p> 
+        <p>In de Armeens-Apostolische traditie wordt Psalm 51 dagelijks gereciteerd. Het wordt beschouwd als een voorbeeld van het 
+          offer dat God behaagt: een gebroken en nederig hart. Dit sluit aan bij St. Grigor's nadruk op nederigheid en berouw in 
+          zijn gebeden.
+        </p>
+      </section>
+
+<section>
+  <h2>Bronnen (APA-stijl)</h2>
+  <div class="card">
+    <p class="bron">
+      <span class="bron-titel"><a href="https://www.bible.com/nl/bible/114/JAS.1.NKJV" target="_blank">The Holy Bible, New King James Version</a></span> (1982). Thomas Nelson Publishers.
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="http://www.armenianhouse.org/grigor-narekatsi/prayer12.html" target="_blank">Grigor Narekatsi</a></span> (2018). <em>The Prayer Book of St. Gregory of Narek, prayer 12. </em> Holy Etchmiadzin Publishing.
+    <p class="bron">
+      <span class="bron-titel"><a href="https://www.wdacna.com/pdf/publications_1427997324.pdf" target="_blank">Fr. Zaven</a></span> (2014). <em>Theology of the Armenian Apostolic Orthodox Church</em>. Western Diocese of the Armenian Church.
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="https://www.bible.com/nl/bible/114/JAS.1.4" target="_blank">Bible.com</a></span> (n.d.). <em>James 1:4 NKJV</em>. 
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="https://armenianbiblestudy.com/sermons/james-11-8/" target="_blank">Mashdots Jobanian</a></span> (2017). <em>James 1: 1-8 commentary</em>. 
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="https://armenianbiblestudy.com/sermons/james-119-22/" target="_blank"> Hayr Zareh</a></span> (2013). <em>James 1:19-22</em>. 
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="https://www.armenianchurch.org/en/news/feast-of-the-exaltation-of-the-holy-cross/12030" target="_blank">Bishop Artak</a></span> (2025). <em>the Feast of the Exaltation of the Holy Cross</em>. 
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="https://www.stjohnarmenianchurch.org/the-potter-and-the-clay/" target="_blank">Bishop Mesrop Parsamyan</a></span> (2024). <em>Jeremiah 18 commentary – The potter and the clay</em>. 
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="https://en.wikipedia.org/wiki/Gregory_of_Narek" target="_blank">Wikipedia</a></span> (2023, March 22). <em>Gregory of Narek</em>. 
+    </p>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    © 2025 – Bijbelstudieproject “Onderzoek” · Elana Hoogenboom
+  </footer>
+</body>
+</html>
