@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onderzoek Week 3 – Elana</title>
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      background-color: #F9F6F1;
+      color: #2c2c2c;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    /* ===== NAVIGATIEBALK ===== */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(120deg, #7C1C1C, #3B2D57);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+      border-bottom: 2px solid #C6A664;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar li a {
+      display: block;
+      color: #F9F6F1;
+      text-align: center;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .navbar li:last-child a {
+      border-right: none;
+    }
+
+    .navbar li a:hover {
+      background-color: #C6A664;
+      color: #3B2D57;
+    }
+
+    header {
+      background: linear-gradient(120deg, #6B1E1E, #3D2C54);
+      color: #F9F6F1;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #E8DCC0;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2.5rem auto;
+      background-color: #fff;
+      padding: 3rem 3.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      border-top: 6px solid #C6A664;
+    }
+
+    h2 {
+      color: #6B1E1E;
+      border-bottom: 2px solid #C6A664;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #3D2C54;
+      margin-top: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    blockquote {
+      background-color: #f3eee7;
+      border-left: 5px solid #C6A664;
+      margin: 1.5rem 0;
+      padding: 1rem 1.4rem;
+      font-style: italic;
+      color: #3D2C54;
+    }
+
+    .bron {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 0.6rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #6B1E1E;
+      padding: 1.5rem;
+      border-top: 1px solid #C6A664;
+      background-color: #f5f3ed;
+    }
+
+    .card {
+      background-color: #f8f7f4;
+      border: 1px solid #e5e0d8;
+      border-radius: 10px;
+      padding: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .bron-titel {
+      font-weight: bold;
+      color: #6B1E1E;
+    }
+
+    .disabled {
+      background-color: #e0dfdb;
+      color: #999;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+
+  .bron-titel a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .bron-titel a:hover {
+    text-decoration: underline;
+  }
+
+  /* ============================================= Mobile verie ============================================= */
+/* ===== NAVBAR ===== */
+@media (max-width: 600px) {
+  .navbar ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start; 
+    padding-left: 0;             
+    margin: 0;                   
+  }
+
+  .navbar li {
+    flex: 0 0 auto;             
+  }
+
+  .navbar li a {
+    padding: 0.75rem 1rem;      
+    font-size: 1rem;            
+    border-right: 1px solid rgba(255,255,255,0.1); 
+  }
+}
+</style>
+  </style>
+</head>
+
+<body>
+    <nav class="navbar">
+    <ul>
+      <li><a href="../index.html">Bijbel</a></li>
+      <li><a href="../preek.html">Preek</a></li>
+      <li><a href="../Onderzoek.html" class="active">Studie/Onderzoek</a></li>
+      <li><a href="../Bronnen.html">PDF/Bron</a></li>
+    </ul>
+  </nav>
+  <header>
+    <br>
+    <h1>Onderzoek Profeet Jona – Analyse van het boek Jona</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Inleiding</h2>
+      <p>
+        Van 26 tot en met 30 januari is er de vasten voor profeet Jona. Ondanks dat ik zelf niet mee doe aan deze vast, wil ik deze 5 dagen besteden aan zijn verhaal. Uit het verhaal van Jona kan je namelijk veel lessen halen die wij vandaag de dag in ons eigen leven ook kunnen gebruiken, vooral met de grote vasten om de hoek.
+      </p>
+    </section>
+
+    <section>
+      <h2>Het verhaal van Jona</h2>
+      <blockquote>
+        “Salvation is of the LORD.” (Jonah 2:9, NKJV)
+      </blockquote>
+      <p>
+        Het verhaal begint wanneer God Jona roept en hem vertelt om naar Ninevé te gaan, de grote hoofdstad van het Assyrische rijk. Dit was Israëls grootste vijand, ze stonden bekend om zijn geweld en beestachtigheid. God wil dat Jona hen waarschuwt vanwege hun slechte gedrag. Maar Jona wil dit niet. In plaats van naar het oosten te gaan, richting Ninevé, vlucht hij zo ver mogelijk de andere kant op en stapt op een schip naar Tarsis.
+      </p>
+      <p>
+        <em> Jona vlucht, wordt hier nog niet echt duidelijk. Het enige wat wel duidelijk is is dat hij probeert weg te lopen van God.</em>
+      </p>
+      <p>
+        Op het schip van de heidense zeelieden, gaat Jona in de buik van de boot liggen en valt in slaap. Dan stuurt God een grootte storm. Het schip breekt bijna en de zeelieden raken in paniek. Zij beginnen te bidden tot hun goden en vragen zich af waarom dit hun gebeurd. Door het lot te werpen ontdekken ze dat Jona de oorzaak is van de storm. Ze vragen wie hij is, en Jona zegt dat hij de God aanbidt die de zee en het land heeft gemaakt. 
+      </p>
+      <p>
+        <em>Wat nogal dubbel is omdat Jona juist voor die God aan het vluchten is via de zee.</em>
+      </p>
+      <p>
+        Wanneer de zeelieden vragen wat ze moeten doen om de storm te stoppen, zegt Jona dat ze hem overboord moeten gooien. 
+      </p>
+      <p>
+        <em>Dit lijkt moedig, maar eigenlijk probeert Jona zo als nog te ontsnappen aan het gaan naar Nineve. </em>
+      </p>
+      <p>
+        De zeelieden willen Jona niet overboard gooien en bidden tot God om vergeving voordat ze hem toch in zee werpen. Zodra Jona in het water valt, stopt de storm. De zeelieden krijgen respect voor de God van Israël en aanbidden Hem.
+      </p>
+      <p>
+        <em>Meer dan Jona zelf ooit heeft gedaan.</em>
+      </p>
+      <p>
+        God laat Jona niet verdrinken en stuurt een grote vis die Jona inslikt. 
+      </p>
+      <p>
+        <em> Wat normaal de dood zou zijn, wordt hier juist een redding. </em>
+      </p>
+      <p>
+        Drie dagen en drie nachten zit Jona in de buik van de vis. Hier bidt hij tot God. Jona zegt niet duidelijk dat hij spijt heeft, maar hij dankt God wel dat Hij hem niet heeft losgelaten en belooft te gehoorzamen.
+      </p>
+      <p>
+        God laat de vis Jona uitspugen op het land. Jona krijgt opnieuw de opdracht om naar Ninevé te gaan. Dit keer gaat hij wel die kant op. Ninevé is heel groot toch loopt Jona maar één dag de stad in. Hij roept slechts één korte boodschap: “Over veertig dagen wordt Ninevé omgekeerd" meer zegt hij niet. Hij noemt God niet, zegt niet wat de mensen fout doen en geeft geen hoop of uitleg.
+      </p>
+      <p>
+        <em>Het lijkt alsof hij zo min mogelijk moeite doet, misschien omdat hij wil dat de stad echt wordt vernietigd.</em>
+      </p>
+      <p>
+        De mensen van Ninevé geloven de boodschap. Van arm tot rijk, zelfs de koning, iedereen toont berouw. Ze vasten, trekken rouwkleren aan en roepen tot God. Zelfs de dieren worden hierbij betrokken. God ziet dat ze spijt hebben en besluit de stad niet te vernietigen.
+      </p>
+      <p>
+        Dit maakt Jona woedend. Hij vertelt waarom hij in het begin was gevlucht, niet uit angst, maar omdat hij wist dat God genade zou toonen. Jona wist dat God vergevingsgezind en liefdevol is en hij accepteerde niet dat God zijn vijanden zou vergeven. Hij zegt tegen God dat hij liever wil sterven dan leven met zo’n God.
+      </p>
+      <p>
+        God antwoordt rustig en vraagt of Jona’s boosheid wel juist is. Jona zegt niets en gaat buiten de stad zitten en hoopt dat God zich misschien toch nog bedenkt. God laat een plant groeien die Jona schaduw geeft tegen de hitte en Jona is daar blij mee. Maar de volgende dag laat God een worm de plant kapotmaken en de plant droogt uit. In de brandende zon wordt Jona opnieuw boos en vraagt hij weer om te sterven. Dan verteld God iets aan Jona. Hij zegt dat Jona verdrietig is om een plant waar hij niets voor heeft gedaan en die maar één dag leefde. En God vraagt, als jij al zoveel geeft om een plant, mag Ik dan niet geven om een grote stad vol mensen die niet weten wat goed of fout is?
+      </p>
+      <p>
+        <em> Daar eindigt het boek. We horen niet wat Jona antwoordt, want dat is niet het belangrijkste. De vraag  voor de lezer is namelijk: Kan jij accepteren dat God ook mensen die jij het niet waard vindt liefheeft en red? Het boek Jona houdt ons een spiegel voor. Het laat zien hoe snel wij God Zijn genade voor onszelf willen, maar niet voor anderen.</em>
+      </p>
+    </section>
+
+    <section>
+      <h2>de diepere anaylse + uitleg van heilige</h2>
+      <p> Nog mee bezig ....
+      </p>
+      </section>
+
+<section>
+  <h2>Bronnen (APA-stijl)</h2>
+  <p> Nog mee bezig...</p>
+  <div class="card">
+    <p class="bron">
+      <span class="bron-titel"><a href="https://www.bible.com/nl/bible/114/JAS.1.NKJV" target="_blank">The Holy Bible, New King James Version</a></span> (1982). Thomas Nelson Publishers.
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="http://www.armenianhouse.org/grigor-narekatsi/prayer12.html" target="_blank">Grigor Narekatsi</a></span> (2018). <em>The Prayer Book of St. Gregory of Narek, prayer 12. </em> Holy Etchmiadzin Publishing.
+    <p class="bron">
+      <span class="bron-titel"><a href="https://www.wdacna.com/pdf/publications_1427997324.pdf" target="_blank">Fr. Zaven</a></span> (2014). <em>Theology of the Armenian Apostolic Orthodox Church</em>. Western Diocese of the Armenian Church.
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="https://www.bible.com/nl/bible/114/JAS.1.4" target="_blank">Bible.com</a></span> (n.d.). <em>James 1:4 NKJV</em>. 
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="https://armenianbiblestudy.com/sermons/james-11-8/" target="_blank">Mashdots Jobanian</a></span> (2017). <em>James 1: 1-8 commentary</em>. 
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="https://armenianbiblestudy.com/sermons/james-119-22/" target="_blank"> Hayr Zareh</a></span> (2013). <em>James 1:19-22</em>. 
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="https://www.armenianchurch.org/en/news/feast-of-the-exaltation-of-the-holy-cross/12030" target="_blank">Bishop Artak</a></span> (2025). <em>the Feast of the Exaltation of the Holy Cross</em>. 
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="https://www.stjohnarmenianchurch.org/the-potter-and-the-clay/" target="_blank">Bishop Mesrop Parsamyan</a></span> (2024). <em>Jeremiah 18 commentary – The potter and the clay</em>. 
+    </p>
+    <p class="bron">
+      <span class="bron-titel"><a href="https://en.wikipedia.org/wiki/Gregory_of_Narek" target="_blank">Wikipedia</a></span> (2023, March 22). <em>Gregory of Narek</em>. 
+    </p>
+  <div>
+</section>
+
+  </main>
+
+  <footer>
+    © 2026 – Bijbelstudieproject “Onderzoek Jona” · Elana Hoogenboom
+  </footer>
+</body>
+</html>
