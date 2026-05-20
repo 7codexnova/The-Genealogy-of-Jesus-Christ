@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bibliotheek</title>
+
+  <style>
+    body {
+      font-family: "Georgia", "Garamond", serif;
+      background-color: #F9F6F1;
+      color: #2c2c2c;
+      margin: 0;
+      padding: 5rem 2rem 3rem;
+      max-width: 1400px;
+      margin-inline: auto;
+      line-height: 1.8;
+      background-image: radial-gradient(
+        circle at bottom right,
+        rgba(123, 91, 150, 0.09),
+        transparent 60%
+      );
+    }
+
+    /* ===== NAVIGATIE ===== */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(120deg, #7C1C1C, #3B2D57);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+      border-bottom: 2px solid #C6A664;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar li a {
+      display: block;
+      padding: 1rem 2rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #F9F6F1;
+      border-right: 1px solid rgba(255,255,255,0.15);
+      transition: 0.3s;
+      letter-spacing: 0.5px;
+    }
+
+    .navbar li:last-child a {
+      border-right: none;
+    }
+
+    .navbar li a:hover {
+      background-color: #C6A664;
+      color: #3B2D57;
+    }
+
+    /* ===== TITEL ===== */
+    h1 {
+      margin-top: 7rem;
+      text-align: center;
+      color: #3B2D57;
+      font-size: 2.6rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #6a5d7d;
+      font-size: 1.05rem;
+      margin-bottom: 3rem;
+    }
+
+    .armenian-cross {
+      display: block;
+      margin: 0 auto 0.7rem auto;
+      width: 3.3rem;
+    }
+
+    /* ===== BOEKENKAST ===== */
+    .library {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    .shelf {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.5rem;
+      padding: 0 0 1.5rem;
+    }
+
+    .shelf::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 16px;
+      background: linear-gradient(to bottom, #8B5E3C, #5E3B1F);
+      border-radius: 8px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+      z-index: 0;
+    }
+
+    /* ===== BOEK ===== */
+    .book {
+      position: relative;
+      z-index: 1;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .book:hover {
+      transform: translateY(-8px);
+    }
+
+    .book-cover {
+      background: #fff;
+      border: 1px solid #d8cdb9;
+      border-radius: 8px;
+      padding: 0.5rem;
+      box-shadow:
+        0 4px 12px rgba(0,0,0,0.12),
+        4px 0 0 #ece5d9;
+      transition: all 0.3s ease;
+    }
+
+    .book:hover .book-cover {
+      border-color: #C6A664;
+      box-shadow:
+        0 8px 20px rgba(0,0,0,0.18),
+        4px 0 0 #C6A664;
+    }
+
+    .book-cover img {
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .book-title {
+      margin-top: 0.7rem;
+      font-size: 0.95rem;
+      font-weight: bold;
+      color: #3B2D57;
+      text-align: center;
+      line-height: 1.35;
+    }
+
+    .book-author {
+      margin-top: 0.2rem;
+      font-size: 0.85rem;
+      color: #7C1C1C;
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1100px) {
+      .shelf {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 5rem 1rem 2rem;
+      }
+
+      .navbar ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+      }
+
+      .navbar li {
+        flex: 0 0 auto;
+      }
+
+      .navbar li a {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+      }
+
+      .shelf {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Bijbel</a></li>
+      <li><a href="preek.html">Preek</a></li>
+      <li><a href="Onderzoek.html">Studie/Onderzoek</a></li>
+      <li><a href="bronnen.html">PDF/Bron</a></li>
+      <li><a href="bibliotheek.html">Bibliotheek</a></li>
+    </ul>
+  </nav>
+
+  <h1>
+    <img src="photos/armenian-cross.png" class="armenian-cross" alt="Armeens kruis">
+    Bibliotheek
+  </h1>
+
+  <p class="subtitle">
+    Een overzicht van mijn persoonlijke theologische bibliotheek.
+    Klik op een boek om meer informatie te lezen.
+  </p>
+
+  <div class="library">
+
+    <!-- ===== 5 PLANKEN MET ELK 6 BOEKEN ===== -->
+    <!-- Je hoeft alleen de titels, afbeeldingen en links aan te passen -->
+
+    <!-- Plank 1 -->
+    <div class="shelf">
+      <!-- 6 boeken -->
+      <a href="boeken/boek1.html" class="book"> <div class="book-cover"><img src="photos/Boek1.jpg" alt="Boek 1"></div><div class="book-title">On the Unity of Christ</div><div class="book-author">St. Cyril of Alexandria</div></a>
+      <a href="boeken/boek2.html" class="book"> <div class="book-cover"><img src="photos/Boek2.jpg" alt="Boek 2"></div><div class="book-title">The Prayer Book of</div><div class="book-author">St. Gregor Narekatsi</div></a>
+      <a href="boeken/boek3.html" class="book"> <div class="book-cover"><img src="photos/Boek3.jpg" alt="Boek 3"></div><div class="book-title">The Apostolic Fathers</div><div class="book-author"> Michael W. Holmes</div></a>
+      <a href="boeken/boek4.html" class="book"> <div class="book-cover"><img src="photos/Boek4.webp" alt="Boek 4"></div><div class="book-title">The Old Testament as authoritative scripture in the early churches of the East</div><div class="book-author">Vahan S. Hovhanessian</div></a>
+      <a href="boeken/boek5.html" class="book"> <div class="book-cover"><img src="photos/Boek5.jpg" alt="Boek 5"></div><div class="book-title">Third Corinthians : reclaiming Paul for Christian orthodoxy</div><div class="book-author">Vahan S. Hovhanessian</div></a>
+      <a href="boeken/boek6.html" class="book"> <div class="book-cover"><img src="photos/Boek6.jpg" alt="Boek 6"></div><div class="book-title">The Didache Teaching of the Twelve Apostles</div><div class="book-author">Charles H. Hoole</div></a>
+    </div>
+
+    <!-- Plank 2 -->
+    <div class="shelf">
+      <a href="boeken/boek7.html" class="book"><div class="book-cover"><img src="photos/Boek7.jpg" alt="Boek 7"></div><div class="book-title">Worship Traditions in Armenia And the Neighboring Christian East</div><div class="book-author"> Roberta R. Ervine</div></a>
+      <a href="boeken/boek8.html" class="book"><div class="book-cover"><img src="photos/Boek8.jpg" alt="Boek 8"></div><div class="book-title">Macarius of Jerusalem: Letter to the Armenians, AD 335</div><div class="book-author"> Abraham Terian</div></a>
+      <a href="boeken/boek9.html" class="book"><div class="book-cover"><img src="photos/Boek9.jpg" alt="Boek 9"></div><div class="book-title">The Doctor of Mercy The Sacred Treasures of St. Gregory of Narek</div><div class="book-author">Michael Papazian</div></a>
+      <a href="boeken/boek10.html" class="book"><div class="book-cover"><img src="photos/Boek10.jpg" alt="Boek 10"></div><div class="book-title">The Festal Works of St. Gregory of Narek</div><div class="book-author"> Abraham Terian</div></a>
+      <a href="boeken/boek11.html" class="book"><div class="book-cover"><img src="photos/Boek11.jpg" alt="Boek 11"></div><div class="book-title">From the Depths of the Heart Annotated Translation of the Prayers of St. Gregory of Narek</div><div class="book-author">Abraham Terian</div></a>
+      <a href="boeken/boek12.html" class="book"><div class="book-cover"><img src="photos/Boek12.jpg" alt="Boek 12"></div><div class="book-title">Christology and The Council of Chalcedon</div><div class="book-author">Fr. Shenouda M. Ishak</div></a>
+    </div>
+
+    <!-- Plank 3 -->
+    <div class="shelf">
+      <a href="boeken/boek13.html" class="book"><div class="book-cover"><img src="photos/Boek13.jpg" alt="Boek 13"></div><div class="book-title">De weg naar het zijn Geloof, denk en durf</div><div class="book-author">Gasi Gasparyan</div></a>
+      <a href="boeken/boek14.html" class="book"><div class="book-cover"><img src="photos/Boek14.png" alt="Boek 14"></div><div class="book-title">On God and Christ</div><div class="book-author">St. Gregory of Nazianzus</div></a>
+      <a href="boeken/boek15.html" class="book"><div class="book-cover"><img src="photos/Boek15.webp" alt="Boek 15"></div><div class="book-title">On the Church: Select Letters</div><div class="book-author">St Cyprian of Carthage</div></a>
+      <a href="boeken/boek16.html" class="book"><div class="book-cover"><img src="photos/Boek16.jpg" alt="Boek 16"></div><div class="book-title">On the Church: Select Treatises</div><div class="book-author">St Cyprian of Carthage</div></a>
+      <a href="boeken/boek17.html" class="book"><div class="book-cover"><img src="photos/Boek17.png" alt="Boek 17"></div><div class="book-title">On Marriage and Family Life</div><div class="book-author">St. John Chrysostom</div></a>
+      <a href="boeken/boek18.html" class="book"><div class="book-cover"><img src="photos/Boek18.jpg" alt="Boek 18"></div><div class="book-title">On the Apostolic Preaching</div><div class="book-author">St. Irenaeus of Lyons</div></a>
+    </div>
+
+    <!-- Plank 4 -->
+    <div class="shelf">
+      <a href="boeken/boek19.html" class="book"><div class="book-cover"><img src="photos/Boek19.png" alt="Boek 19"></div><div class="book-title">On Death and Eternal Life</div><div class="book-author">St Gregory of Nyssa</div></a>
+      <a href="boeken/boek20.html" class="book"><div class="book-cover"><img src="photos/Boek20.jpg" alt="Boek 20"></div><div class="book-title">On Ascetical Life</div><div class="book-author">St. Isaac of Nineveh</div></a>
+      <a href="boeken/boek21.html" class="book"><div class="book-cover"><img src="photos/Boek21.jpg" alt="Boek 21"></div><div class="book-title">The History of the Church</div><div class="book-author">Eusebius</div></a>
+      <a href="boeken/boek22.html" class="book"><div class="book-cover"><img src="photos/Boek22.jpg" alt="Boek 22"></div><div class="book-title">On the Holy Spirit with Letters to Amphilochius</div><div class="book-author"> St Basil of Caesarea</div></a>
+      <a href="boeken/boek23.html" class="book"><div class="book-cover"><img src="photos/Boek23.jpg" alt="Boek 23"></div><div class="book-title">Know and Believe: A Brief Catechism of the Armenian Apostolic Church</div><div class="book-author">Vahan Hovhanessian</div></a>
+      <a href="boeken/boek24.html" class="book"><div class="book-cover"><img src="photos/Boek24.webp" alt="Boek 24"></div><div class="book-title">Christology of the Armenian Church</div><div class="book-author"> Dr Vrej Nersessian</div></a>
+    </div>
+
+    <!-- Plank 5 -->
+    <div class="shelf">
+      <a href="boeken/boek25.html" class="book"><div class="book-cover"><img src="photos/Boek25.webp" alt="Boek 25"></div><div class="book-title">Commentary on the Twelve Prophets, Volume 2</div><div class="book-author">Cyril Of Alexanderia</div></a>
+      <a href="boeken/boek26.html" class="book"><div class="book-cover"><img src="photos/Boek26.jpg" alt="Boek 26"></div><div class="book-title">Blessing of Blessings: Commentary on the Song of Songs</div><div class="book-author"> Gregory of Narek</div></a>
+      <a href="boeken/boek27.html" class="book"><div class="book-cover"><img src="photos/Boek27.jpg" alt="Boek 27"></div><div class="book-title">In Remembrance of the Lord</div><div class="book-author"> Vahan Hovhanessian</div></a>
+      <a href="boeken/boek28.html" class="book"><div class="book-cover"><img src="photos/Boek28.webp" alt="Boek 28"></div><div class="book-title">Human Nature in Gregory of Nyssa</div><div class="book-author">Johannes Zachhuber</div></a>
+      <a href="boeken/boek29.html" class="book"><div class="book-cover"><img src="photos/Boek29.jpg" alt="Boek 29"></div><div class="book-title">The Fathers Of The Church Vol. XXXVII Saint John of Damascus Fount Of Knowledge</div><div class="book-author"> Saint John of Damascus</div></a>
+      <a href="boeken/boek30.html" class="book"><div class="book-cover"><img src="photos/Boek30.jpg" alt="Boek 30"></div><div class="book-title">Avak Shapat</div><div class="book-author">Michael Daniel Findikyan</div></a>
+    </div>
+
+        <!-- Plank 6 -->
+    <div class="shelf">
+      <a href="boeken/boek31.html" class="book"><div class="book-cover"><img src="photos/Boek31.jpg" alt="Boek 31"></div><div class="book-title">A Homily on the Passion of Christ Attributed to Elishe</div><div class="book-author">R.W. Thomson</div></a>
+      <a href="boeken/boek32.html" class="book"><div class="book-cover"><img src="photos/Boek32.jpg" alt="Boek 32"></div><div class="book-title">The Epistles of St. Ignatius of Antioch: 7 Letters of an Apostolic Father to the Early Churches</div><div class="book-author"> St. Ignatius of Antioch </div></a>
+      <a href="boeken/boek33.html" class="book"><div class="book-cover"><img src="photos/Boek33.jpg" alt="Boek 33"></div><div class="book-title">On the Incarnation</div><div class="book-author">  St. Athanasius of Alexandria</div></a>
+      <a href="boeken/boek34.html" class="book"><div class="book-cover"><img src="photos/Boek34.jpg" alt="Boek 34"></div><div class="book-title">Book of Questions </div><div class="book-author">Gregory of Tatev</div></a>
+      <a href="boeken/boek35.html" class="book"><div class="book-cover"><img src="photos/Boek35.jpg" alt="Boek 35"></div><div class="book-title">Scholia on the Incarnation of the Only Begotten</div><div class="book-author"> Cyril of Alexandria</div></a>
+      <a href="boeken/boek36.html" class="book"><div class="book-cover"><img src="photos/Boek36.jpg" alt="Boek 36"></div><div class="book-title">Orthodox Study Bible</div><div class="book-author">Thomas Nelson</div></a>
+    </div>
+  </div>
+
+</body>
+</html>
